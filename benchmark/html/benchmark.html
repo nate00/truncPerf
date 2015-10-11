@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="text/javascript" src='../js/lib/jquery.js'></script>
+
+    <script type="text/javascript" src='../js/lib/trunk8.js'></script>
+    <script type="text/javascript" src='../js/lib/clamp.js'></script>
+    <script type="text/javascript" src='../js/lib/truncate.js'></script>
+    <script type="text/javascript" src='../js/lib/autoellipsis.js'></script>
+    <script type="text/javascript" src='../js/lib/jquery-truncate.js'></script>
+    <script type="text/javascript" src='../js/lib/dotdotdot.js'></script>
+
+    <script type="text/javascript" src='../js/src/namespace.js'></script>
+    <script type="text/javascript" src='../js/src/options.js'></script>
+    <script type="text/javascript" src='../js/src/truncate.js'></script>
+  </head>
+  <body>
+    <div class='paragraph-container'></div>
+    <script type="text/javascript" src='../js/src/makeParagraphs.js'></script>
+    <script type='text/javascript'>
+      var start = performance.now();
+      truncPerf.benchmark.truncate($('.truncate-me').toArray(), 10);
+      var finish = performance.now();
+      console.log(finish - start);
+    </script>
+  </body>
+</html>
